@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+path{
+    fill: #FFC3A1;
+    stroke: #ffffff;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: .3s;
+}
+path:hover{
+    fill: #A75D5D ;
+}
+.map-container{
+    margin: 2rem;
+}
+body{
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+}
+.card-estados{
+    width: 25rem;
+    height: 35rem;
+    background-color: #FFC3A1;
+    /* align-self: center; */
+    scroll-behavior: y;
+    display: flex;
+    justify-content: center;
+}
+.cidades{
+    background-color: transparent;
+    width: 100%;
+    height: max-content;
+    justify-content: center;
+}
+.sigla-card{
+    border-radius: 100%;
+    background-color: #A75D5D;
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #ffffff solid 3px;
+}
+.uf{
+    color: #ffffff;
+    font-weight: 200;
+}
+.dados-estados{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+}
+.cidade{
+    display: flex;
+    justify-content: center;
+}
