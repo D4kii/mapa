@@ -24,17 +24,11 @@ body{
 }
 .card-estados{
     width: 25rem;
-    height: 35rem;
+    height: max-content;
     background-color: #FFC3A1;
     /* align-self: center; */
     scroll-behavior: y;
     display: flex;
-    justify-content: center;
-}
-.cidades{
-    background-color: transparent;
-    width: 100%;
-    height: max-content;
     justify-content: center;
 }
 .sigla-card{
@@ -58,5 +52,12 @@ body{
 }
 .cidade{
     display: flex;
-    justify-content: center;
+    width: 10rem;
+    height: 30rem;
+}
+.card-cidades{
+    width: 10rem;
+}
+.box-cidades{
+    width: 10rem;
 }
