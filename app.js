@@ -9,27 +9,31 @@ const preencherCard = async (event) => {
     const estado = event.target.id.replace('BR-', '');
     const dados = await getEstados(estado)
 
-    const dadosEstados = await dados.cidades
+    const dadosCidades = await dados.cidades
+   
 
 
     document.getElementById('sigla').textContent = dados.sigla
     document.getElementById('estado').textContent = dados.estado
     document.getElementById('capital').textContent = dados.capital
     document.getElementById('regiao').textContent = dados.regiao
-    document.getElementById('cidade').textContent = dados.cidades
+    
 
-    // dadosEstados.forEach(dadoCidade => {
-    //     const cidadeList = document.createElement('p')
-    //     cidadeList.classList.add('cidade')
-    //     document.getElementById('cidade').textContent = dadoCidade
+    const cidadeBox = document.getElementById('box-cidades')
+    const cardCidade = await dados.cidades.map(criarCardCidades)
+    console.log(cidadeBox)
+    cidadeBox.replaceChildren(...cardCidade)
+}
+const criarCardCidades = async (cidadeDado) =>{
+    const cidade = await cidadeDado;
+    
+        const cidadeList = document.createElement('p')
+        cidadeList.classList.add('cidade')
+        cidadeList.textContent = cidade
 
-
-    // });
-
-    // const cidadeBox = document.getElementById('card-cidades')
-    // cidadeBox.append(cidadeList)
-
-
+        console.log(cidadeList)
+        return cidadeList
+    
 }
 const getEstados = async (estado) => {
 
