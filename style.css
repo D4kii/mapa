@@ -23,13 +23,14 @@ body{
     font-family: 'Inter', sans-serif;
 }
 .card-estados{
-    width: 25rem;
-    height: max-content;
+    width: 30rem;
+    height: 30rem;
     background-color: #FFC3A1;
     /* align-self: center; */
     scroll-behavior: y;
     display: flex;
     justify-content: center;
+    overflow-y: scroll;
 }
 .sigla-card{
     border-radius: 100%;
@@ -53,11 +54,27 @@ body{
 .cidade{
     display: flex;
     width: 10rem;
-    height: 30rem;
+    height: max-content;
+    font-size: .7;
+    margin-top: .5rem;
+}
+.nome-estado{
+    font-size: 2.5rem;
+    color: #A75D5D;
+    width: 15rem;
+}
+.nome-capital,
+.nome-regiao{
+    font-size: 1.5rem;
 }
 .card-cidades{
     width: 10rem;
+    margin: 1rem;
 }
 .box-cidades{
     width: 10rem;
+}
+.card-cidades_title{
+    font-weight: 600;
+
 }

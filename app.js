@@ -15,8 +15,8 @@ const preencherCard = async (event) => {
 
     document.getElementById('sigla').textContent = dados.sigla
     document.getElementById('estado').textContent = dados.estado
-    document.getElementById('capital').textContent = dados.capital
-    document.getElementById('regiao').textContent = dados.regiao
+    document.getElementById('capital').textContent = `Capital: ${dados.capital}`
+    document.getElementById('regiao').textContent = `Região: ${dados.regiao}`
     
 
     const cidadeBox = document.getElementById('box-cidades')
@@ -24,12 +24,12 @@ const preencherCard = async (event) => {
     console.log(cidadeBox)
     cidadeBox.replaceChildren(...cardCidade)
 }
-const criarCardCidades = async (cidadeDado) =>{
-    const cidade = await cidadeDado;
+const criarCardCidades =  (cidadeDado) =>{
+    const cidade =  cidadeDado;
     
         const cidadeList = document.createElement('p')
         cidadeList.classList.add('cidade')
-        cidadeList.textContent = cidade
+        cidadeList.textContent = `- ${cidade}`
 
         console.log(cidadeList)
         return cidadeList
